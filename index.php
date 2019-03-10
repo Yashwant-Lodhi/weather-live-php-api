@@ -14,7 +14,7 @@
     if (isset($_POST['city']) && $_POST['city'] != '') {
 
     $city = ucwords($_POST['city']);
-    $api = file_get_contents('https://api.openweathermap.org/data/2.5/weather?q='.$city.'&appid=8438ec758fdb93bcf1ec7b31a533c65c');
+    $api = file_get_contents('https://api.openweathermap.org/data/2.5/weather?q='.$city.'&appid={YOUR_API_KEY}');
     $api_array = json_decode($api, true);
     $weather = $api_array['weather'][0]['description'];
 
